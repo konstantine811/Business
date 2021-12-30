@@ -1,0 +1,64 @@
+.svg-logo {
+  width: $svg-logo--width;
+  height: $svg-logo--width;
+  &__circle {
+    cx: $svg-logo--width / 2;
+    cy: $svg-logo--width / 2;
+    stroke-width: $circle--stroke-width;
+    fill: transparent;
+    &--outer {
+      r: $circle-outer--radius;
+      stroke: $blue;
+      stroke-dasharray: $circle-outer--length;
+      stroke-dashoffset: $circle-outer--cropped-length;
+      animation: anim-circle-crop--outer 1s $timing forwards 1;
+    }
+    &--middle {
+      r: $circle-middle--radius;
+      stroke: $green;
+      stroke-dasharray: $circle-middle--length;
+      stroke-dashoffset: $circle-middle--cropped-length;
+      animation: anim-circle-crop--middle 1s 40ms $timing forwards 1;
+    }
+    &--inner {
+      r: $circle-inner--radius;
+      stroke: $orange;
+      stroke-dasharray: $circle-inner--length;
+      stroke-dashoffset: $circle-inner--cropped-length;
+      animation: anim-circle-crop--inner 1s 80ms $timing forwards 1;
+    }
+  }
+}
+
+@keyframes anim-circle-crop--outer {
+  from {
+    stroke-dashoffset: $circle-outer--length;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: $circle-outer--cropped-length;
+    opacity: 1;
+  }
+}
+
+@keyframes anim-circle-crop--middle {
+  from {
+    stroke-dashoffset: $circle-middle--length;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: $circle-middle--cropped-length;
+    opacity: 1;
+  }
+}
+
+@keyframes anim-circle-crop--inner {
+  from {
+    stroke-dashoffset: $circle-inner--length;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: $circle-inner--cropped-length;
+    opacity: 1;
+  }
+}

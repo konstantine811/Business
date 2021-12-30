@@ -1,0 +1,18 @@
+// color
+$blue: #1ea7dd;
+$green: #a6d15a;
+$orange: #f6772b;
+
+// svg logo
+$svg-logo--width: 50px;
+$circle--stroke-width: 3.5px;
+$circle-outer--radius: 25px - $circle--stroke-width;
+$circle-outer--length: 2 * 3.14 * $circle-outer--radius;
+$circle-outer--cropped-length: 48px;
+$circle-middle--radius: 19px - $circle--stroke-width;
+$circle-middle--length: 2 * 3.14 * $circle-middle--radius;
+$circle-middle--cropped-length: 40px;
+$circle-inner--radius: 13px - $circle--stroke-width;
+$circle-inner--length: 2 * 3.14 * $circle-inner--radius;
+$circle-inner--cropped-length: 30px;
+$timing: cubic-bezier(0.94, 0.18, 0.19, 1.07);
